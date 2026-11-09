@@ -1,0 +1,73 @@
+// Colours taken from the reference screenshot.
+$button-blue: #0a3aa8;
+$button-blue-hover: #082e86;
+$card-border: rgba(0, 0, 0, 0.07);
+$description-grey: #6b6f76;
+
+.card {
+  // Text on the left, button on the right, centred vertically.
+  // flex-wrap lets the button drop below the text when the card gets too narrow,
+  // so the two never overlap. No fixed height: long text simply makes the card taller.
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 20px;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 16px 24px;
+  list-style: none;
+  border: 1px solid $card-border;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+// Text can shrink to 220px before the button wraps underneath it.
+.text {
+  flex: 1 1 220px;
+  min-width: 0;
+}
+
+.cardTitle {
+  margin: 0 0 4px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--bodyText, #1b1b1b);
+  overflow-wrap: anywhere; // Very long words must not push the button out.
+}
+
+.description {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.4;
+  color: $description-grey;
+  overflow-wrap: anywhere;
+}
+
+// Two classes in the selector so these rules win over Fluent's own button styles.
+.card .button {
+  flex: 0 0 auto; // Never shrinks, so the label stays on one line.
+  min-width: 0;
+  height: 36px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 999px; // Pill shape.
+  background-color: $button-blue;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    background-color: $button-blue-hover;
+    color: #fff;
+  }
+
+  // Disabled button (no valid link): clearly muted.
+  &:global(.is-disabled) {
+    background-color: #c8c8c8;
+    color: #6b6b6b;
+  }
+}

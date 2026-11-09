@@ -1,0 +1,43 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependencies
+node_modules/
+
+# Generated build files
+dist/
+lib/
+lib-dts/
+lib-commonjs/
+lib-esm/
+jest-output/
+release/
+temp/
+.heft/
+
+# Ignore reference images
+/images/
+
+# Ignore generated SharePoint solution files
+/sharepoint/solution/*
+
+# Allow production SPFx packages
+!/sharepoint/solution/*.sppkg
+
+# Coverage
+coverage/
+
+# OS files
+.DS_Store
+
+# Visual Studio
+.ntvs_analysis.dat
+.vs/
+bin/
+obj/
+
+# Generated files
+*.resx.ts
+*.scss.ts

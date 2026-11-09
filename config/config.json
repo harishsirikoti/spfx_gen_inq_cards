@@ -1,0 +1,19 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "general-inquiries-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/generalInquiries/GeneralInquiriesWebPart.js",
+          "manifest": "./src/webparts/generalInquiries/GeneralInquiriesWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "GeneralInquiriesWebPartStrings": "lib/webparts/generalInquiries/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
+  }
+}

@@ -1,0 +1,29 @@
+// Layout reacts to the width of the web part itself (its column on the page),
+// not the browser window, so it also works in narrow SharePoint columns.
+$card-min-width: 440px; // Below this, a card is too narrow for two across, so cards stack.
+$card-gap: 24px;
+
+.generalInquiries {
+  box-sizing: border-box;
+  padding: 8px 0;
+  color: var(--bodyText, #1b1b1b);
+}
+
+.title {
+  margin: 0 0 16px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--bodyText, #1b1b1b);
+}
+
+// Grid: as many equal columns as fit (two on desktop), each at least $card-min-width wide.
+// min(100%, ...) stops a column from ever being wider than the web part.
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, #{$card-min-width}), 1fr));
+  gap: $card-gap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

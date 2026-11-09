@@ -1,0 +1,39 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "general-inquiries-client-side-solution",
+    "id": "0cf030d6-b4c7-4b56-a61e-8a059f70c49c",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.24.0"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "general-inquiries description"
+      },
+      "longDescription": {
+        "default": "general-inquiries description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "general-inquiries Feature",
+        "description": "The feature that activates elements of the general-inquiries solution.",
+        "id": "b788be03-7b15-4e98-b4f7-c3337271c170",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/general-inquiries.sppkg"
+  }
+}
